@@ -1,8 +1,5 @@
-// types/definitions.ts
 
-// ---------------------------------------
 // Core Entity Types
-// ---------------------------------------
 
 export type UUID = string;
 
@@ -13,9 +10,8 @@ export interface BaseEntity {
   deletedAt?: Date | null;
 }
 
-// ---------------------------------------
 // Product & Category
-// ---------------------------------------
+
 
 export interface Category extends BaseEntity {
   name: string;
@@ -45,9 +41,8 @@ export interface Product extends BaseEntity {
   active?: boolean;
 }
 
-// ---------------------------------------
 // Cart & Orders
-// ---------------------------------------
+
 
 export interface CartItem {
   productId: UUID;
@@ -84,9 +79,9 @@ export interface Order extends BaseEntity {
   notes?: string;
 }
 
-// ---------------------------------------
+
 // User & Profile
-// ---------------------------------------
+
 
 export interface User extends BaseEntity {
   firstName: string;
@@ -110,9 +105,8 @@ export interface Address extends BaseEntity {
   isDefault?: boolean;
 }
 
-// ---------------------------------------
 // Reviews & Ratings
-// ---------------------------------------
+
 
 export interface Review extends BaseEntity {
   userId: UUID;
